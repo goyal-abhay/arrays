@@ -3,7 +3,7 @@ let filter = (elements,cb) => {
     let arr = [];
     for (let i=0; i<elements.length; i++){
         k = cb(elements[i]);
-        if (k) {
+        if (k === true) {
             arr.push(elements[i]);
         }
     }

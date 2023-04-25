@@ -8,8 +8,8 @@ let flatten = (elements) => {
     }
     let k;
     let ans = [];
-    for (let i=0; i<elements.length; i++){
-        k = nestArr(elements[i]);
+    for (let index=0; index<elements.length; index++){
+        k = nestArr(elements[index]);
         ans.push(k);
     }
     return ans;

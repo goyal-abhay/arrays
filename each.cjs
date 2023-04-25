@@ -3,8 +3,8 @@ let each = (elements,cb) => {
     if (!Array.isArray(elements)) {
         return [];
     }
-    for (let i=0; i<elements.length; i++){
-        cb(elements[i],i);
+    for (let index=0; index<elements.length; index++){
+        cb(elements[index],index);
     }
 }
 

@@ -1,10 +1,10 @@
 let reduce = (elements, cb, startingValue) => {
-    for (let i=0; i<elements.length; i++){
+    for (let index=0; index<elements.length; index++){
         if (startingValue === undefined) {
-            cb(elements[0],elements[i]);
+            cb(elements[0],elements[index]);
         }
         else {
-            cb(startingValue,elements[i]);
+            cb(startingValue,elements[index]);
         }
     }
 }

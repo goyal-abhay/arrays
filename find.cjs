@@ -1,8 +1,8 @@
 let find = (elements,cb) => {
     let k;
-    for (let i=0; i<elements.length; i++){
-        k = cb(elements[i]);
-        if (k) return elements[i];
+    for (let index=0; index<elements.length; index++){
+        k = cb(elements[index]);
+        if (k) return elements[index];
         else return undefined;
     }
 }

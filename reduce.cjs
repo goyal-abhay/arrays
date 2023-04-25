@@ -1,12 +1,14 @@
 let reduce = (elements, cb, startingValue) => {
-    for (let index=0; index<elements.length; index++){
-        if (startingValue === undefined) {
-            cb(elements[0],elements[index],index,elements);
-        }
-        else {
-            cb(startingValue,elements[index],index,elements);
-        }
+    let index = 0;
+    if (startingValue === undefined) {
+        startingValue = elements[0];
+        index = 1
     }
+    while (index<elements.length){
+        startingValue = cb(startingValue,elements[index],index,elements);
+        index++;
+    }
+    return startingValue;
 }
 
 module.exports = reduce;

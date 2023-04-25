@@ -7,7 +7,7 @@ let flatten = (elements,depth=1) => {
     let ans = [];
     for (let index=0; index<elements.length; index++){
         k = nestArr(elements[index],depth);
-        ans.push(k);
+        if (k!==undefined) ans.push(k);
     }
     return ans;
 }
